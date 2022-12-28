@@ -7,9 +7,12 @@
 --text-color:#434455;
 }
 
-h1, h2, h3, h4, h5, h6 , p, ul {
-    margin: 0;
-padding-left: 0;}
+* {
+margin: 0;
+padding: 0;
+list-style: none;
+box-sizing: border-box;
+}
 
 
 
@@ -31,21 +34,38 @@ a {
     color: inherit;
 }
  
+h1, h2, h3, h4, h5, h6 , p, ul {
+    margin: 0;
+padding-left: 0;}
+
+.container {
+    width: 1158px;
+    margin: 0 auto;
+}
+
 /* -- Header and contacts -- */
+
+
 
 .header {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 gap:100px;
-}
+padding-top: 24px;
+padding-bottom: 24px;}
 
+.header > .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ 
 .logo-studio  {
     font-family: 'Raleway';
 font-weight: 800;
 font-size: 18px;
-display: flex;
+
 letter-spacing: 0.03em;
 color: #2E2F42;
 }
@@ -54,9 +74,13 @@ color: #2E2F42;
 color: #4D5AE5;
 }
 
-.nav{}
+.nav{
+
+}
+
 .nav-list {
     list-style: none;
+   
 }
 
 .nav-item {
@@ -72,7 +96,7 @@ color: #4D5AE5;
 
 /*.contact {
 } */
- 
+  
 .contact-item {
 display:inline ;  
     font-style: normal;
@@ -94,6 +118,14 @@ height: 603px;
 background: var(--accent-background-color);
 }
 
+.main-box > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .main-box-name {
     font-weight: 500;
 font-size: 56px;
@@ -101,7 +133,15 @@ line-height: 1.07;
 text-align: center;
 letter-spacing: 0.02em;
 color: #FFFFFF;
+
+padding-top: 188px;
+padding-bottom: 48px;
+
+
+max-width: 494px;
 }
+
+ 
 
 .main-btn {
     font-weight: 500;
@@ -110,9 +150,10 @@ color: #FFFFFF;
     letter-spacing: 0.04em;
     color: #FFFFFF;
 
-   display: flex;
-   align-items: center;
-   justify-content: center;
+ display: flex;
+ align-items: center;
+ align-content: center;
+    
    margin: 0 auto;
    padding: 16px 32px;
    border: none;
@@ -121,6 +162,9 @@ color: #FFFFFF;
 background: #4D5AE5;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
+
+
+
 } 
 
 .main-btn:hover, .main-btn:focus  {
@@ -131,7 +175,10 @@ border-radius: 4px;
 
 /* -- PRINCIPLES -- */
 
-.principles { }
+.principles { 
+    padding-top: 120px;
+    
+}
 
 .principles-name-hidden {
     display: none;
@@ -140,25 +187,30 @@ border-radius: 4px;
 .pr-list { 
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    padding: 0px 0px 32px;
-    gap: 32px;
-    list-style: none;
+    justify-content: center;     
+    gap: 24px;
 }
+
+.pr-list-subitem {
+    max-width: 264px;
+    margin-top: 8px;}
+
+/* common text / color properties from home task 2 */
 .pr-list-item, .team-name, .projects-items-name {
+    font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--headers-text-color);
 }
 
-
 .pr-list-subitem, .team-position, .projects-items-category {
     font-weight: 400;
 font-size: 16px;
-line-height: 24px;
+line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--text-color);
+
 }
 
  
@@ -166,7 +218,10 @@ color: var(--text-color);
 
 /* -- WHAT WE ARE DOING -- */
 
-/*.whatdo {}*/
+.whatdo {
+    padding-top: 120px;
+    padding-bottom: 120px;
+} 
  
 .whatdo-section { 
     font-weight: 700;
@@ -176,14 +231,15 @@ text-align: center;
 letter-spacing: 0.02em;
 text-transform: capitalize;
 color: var(--headers-text-color);
+
+margin-bottom: 72px;
 }
 
 .what-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 0px 0px 32px;
-    gap: 32px;
+    gap: 24px;
     list-style: none;
 }
 
@@ -198,7 +254,11 @@ height: 300px;
 /* -- TEAM -- */
  
 .team {
-    background: var(--second-background-color);}
+    background: var(--second-background-color);
+padding-top: 120px;
+padding-bottom: 120px;}
+
+
 
 .team-sections {
     font-weight: 700;
@@ -209,6 +269,8 @@ text-align: center;
 letter-spacing: 0.02em;
 text-transform: capitalize;
 color: var(--headers-text-color);
+
+margin-bottom: 72px;
 }
 
 .team-list {
@@ -216,10 +278,32 @@ color: var(--headers-text-color);
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0px 0px 32px;
+
     gap: 32px;
 list-style: none;   
 }
+
+
+.team-list-item {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+ 
+
+}
+
+.team-name {
+    margin-top: 32px;
+    text-align: center;
+}
+
+
+.team-position {
+    margin-top: 8px;
+    margin-bottom: 32px;
+ text-align: center;
+} 
 
 /* -- these items see above - combined with principles -- 
 .team-name {
@@ -233,12 +317,18 @@ list-style: none;
 /* -- PORTFOLIO PAGE -- */ /* -- PORTFOLIO PAGE -- */
 
  
+.port-n-projects {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
 
 /* -- Buttons portfolio -- */
 .port-btn-list {
     list-style: none;
     display: flex;
     flex-direction: row;
+justify-content: center;
+
 }
 
  
@@ -248,17 +338,20 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.04em;
 color: #4D5AE5;
- 
+background: #F4F4FD;
+border: 1px solid #E7E9FC;
+border-radius: 4px;
 
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-margin: 14px;
+
+margin-right: 14px;
 padding: 12px 24px;
-background: #F4F4FD;
-border: 1px solid #E7E9FC;
-border-radius: 4px;
+
+margin-bottom: 72px;
+
 }
 
 
@@ -270,26 +363,51 @@ color: #FFFFFF;
 
 /* -- Items portfolio -- */
 
-.projects-items {
-    list-style: none;
-    display:inline-table;
-    flex-direction: row-reverse;
+.projects {
+    display:flex;
+    flex-wrap: wrap;
+    row-gap:48px;
+    column-gap:24px;
+    justify-content: center;
 }
 
+.projects-items {
+    list-style: none;
+    background: #FFFFFF;
+border: 1px solid #E7E9FC;
+padding-bottom: 32px;
+
+flex-basis: calc((100%-24px-24px) / 3);
+
+}
+
+.projects-items-name {
+    margin-top: 32px;
+    padding-left: 16px;
+}
+
+.projects-items-category {
+    margin-top: 8px;
+    padding-left: 16px;
+
+}
 
 /* -- these items see above - combined with principles 
 .projects-items-name {
 }
-.projects-items-category {
-}
+
 --*/
 
 
 /* -- FOOTER  -- */
 
 .footer {
-height: 310px;
+
 background: var(--accent-background-color);
+
+padding-top: 100px;
+padding-bottom: 100px;
+
 }
 
 .footer-logo-studio {
@@ -300,6 +418,7 @@ background: var(--accent-background-color);
     line-height: 1.16;
     color: #F4F4FD;
     text-transform: uppercase;
+ 
     }
     
 .footer-logo-web {
@@ -312,6 +431,10 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #E7E9FC;
+
+margin-top: 16px;
+max-width: 264px;
+}
 
 
 
