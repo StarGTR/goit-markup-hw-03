@@ -41,6 +41,7 @@ padding-left: 0;}
 .container {
     width: 1158px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* -- Header and contacts -- */
@@ -48,17 +49,15 @@ padding-left: 0;}
 
 
 .header {
-    display: flex;
-    flex-direction: column;
+
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-gap:100px;
-padding-top: 24px;
-padding-bottom: 24px;}
+}
 
 .header > .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    
 }
  
 .logo-studio  {
@@ -68,19 +67,25 @@ font-size: 18px;
 
 letter-spacing: 0.03em;
 color: #2E2F42;
+
+padding-top: 24px;
+padding-bottom: 24px;
+
 }
 
 .logo-web   {
 color: #4D5AE5;
+
 }
 
 .nav{
-
+    margin-left: 76px;
+    
 }
 
 .nav-list {
     list-style: none;
-   
+    align-items: center;
 }
 
 .nav-item {
@@ -88,14 +93,21 @@ color: #4D5AE5;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--headers-text-color);
+margin-right: 40px;
+
 }
 
+.nav-link {
+    padding: 15px;
+}
 .nav-item:hover, .nav-item:focus {
 color: #4D5AE5;
 }
 
-/*.contact {
-} */
+.contact {
+    margin-left: auto;
+   
+} 
   
 .contact-item {
 display:inline ;  
@@ -105,6 +117,7 @@ display:inline ;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--headers-text-color);
+    margin-right: 40px;
 }
 
 .contact-item:hover, .contact-item:focus {
@@ -114,7 +127,8 @@ display:inline ;
 /* -- MAIN BOX -- */
 
 .main-box {
-height: 603px;
+    padding: 188px 0;
+    
 background: var(--accent-background-color);
 }
 
@@ -134,8 +148,8 @@ text-align: center;
 letter-spacing: 0.02em;
 color: #FFFFFF;
 
-padding-top: 188px;
-padding-bottom: 48px;
+margin-bottom: 48px;
+
 
 
 max-width: 494px;
@@ -175,9 +189,12 @@ border-radius: 4px;
 
 /* -- PRINCIPLES -- */
 
+.principles-whatwedo {
+    padding: 120px 0;
+}
+
 .principles { 
-    padding-top: 120px;
-    
+
 }
 
 .principles-name-hidden {
@@ -219,8 +236,7 @@ color: var(--text-color);
 /* -- WHAT WE ARE DOING -- */
 
 .whatdo {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    
 } 
  
 .whatdo-section { 
@@ -231,7 +247,7 @@ text-align: center;
 letter-spacing: 0.02em;
 text-transform: capitalize;
 color: var(--headers-text-color);
-
+margin-top: 120px;
 margin-bottom: 72px;
 }
 
@@ -289,7 +305,7 @@ list-style: none;
     display: flex;
     flex-direction: column;
     justify-items: center;
- 
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 
 }
 
@@ -328,7 +344,8 @@ list-style: none;
     display: flex;
     flex-direction: row;
 justify-content: center;
-
+gap: 24px;
+margin-bottom: 72px;
 }
 
  
@@ -347,10 +364,10 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 
-margin-right: 14px;
+ 
 padding: 12px 24px;
 
-margin-bottom: 72px;
+ 
 
 }
 
@@ -369,27 +386,34 @@ color: #FFFFFF;
     row-gap:48px;
     column-gap:24px;
     justify-content: center;
+   
+ 
 }
 
 .projects-items {
     list-style: none;
     background: #FFFFFF;
-border: 1px solid #E7E9FC;
-padding-bottom: 32px;
 
-flex-basis: calc((100%-24px-24px) / 3);
+flex-basis: calc((100% - 24px - 24px) / 3);
 
+}
+
+.low-border {
+    border: 1px solid #E7E9FC;
 }
 
 .projects-items-name {
     margin-top: 32px;
     padding-left: 16px;
+
+    
 }
 
 .projects-items-category {
     margin-top: 8px;
+    margin-bottom: 32px;
     padding-left: 16px;
-
+    
 }
 
 /* -- these items see above - combined with principles 
