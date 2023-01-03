@@ -1,4 +1,4 @@
-/* 2ND Home task */
+/* 3RD Home task */
 
 :root {
     --accent-background-color:#2E2F42;
@@ -126,6 +126,7 @@ display:inline ;
 
 /* -- MAIN BOX -- */
 
+
 .main-box {
     padding: 188px 0;
     
@@ -140,8 +141,9 @@ background: var(--accent-background-color);
 
 }
 
+
 .main-box-name {
-    font-weight: 500;
+    font-weight: 700;
 font-size: 56px;
 line-height: 1.07;
 text-align: center;
@@ -152,7 +154,7 @@ margin-bottom: 48px;
 
 
 
-max-width: 494px;
+max-width: 496px;
 }
 
  
@@ -176,9 +178,6 @@ max-width: 494px;
 background: #4D5AE5;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
-
-
-
 } 
 
 .main-btn:hover, .main-btn:focus  {
@@ -194,7 +193,6 @@ border-radius: 4px;
 }
 
 .principles { 
-
 }
 
 .principles-name-hidden {
@@ -227,10 +225,8 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--text-color);
-
 }
 
- 
  
 
 /* -- WHAT WE ARE DOING -- */
@@ -306,19 +302,19 @@ list-style: none;
     flex-direction: column;
     justify-items: center;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-
 }
 
-.team-name {
-    margin-top: 32px;
+.team-name-position {
+    padding: 32px;
     text-align: center;
+}
+
+.team-name {   
 }
 
 
 .team-position {
     margin-top: 8px;
-    margin-bottom: 32px;
- text-align: center;
 } 
 
 /* -- these items see above - combined with principles -- 
@@ -398,21 +394,26 @@ flex-basis: calc((100% - 24px - 24px) / 3);
 
 }
 
+img {display: block;
+    width: 100%;
+    height: auto;}
+
 .low-border {
-    border: 1px solid #E7E9FC;
+    padding: 32px 16px;
+
+border: 1px solid #E7E9FC;
+border-top: none;
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+
 }
 
 .projects-items-name {
-    margin-top: 32px;
-    padding-left: 16px;
-
-    
+   
 }
 
 .projects-items-category {
     margin-top: 8px;
-    margin-bottom: 32px;
-    padding-left: 16px;
+     
     
 }
 
