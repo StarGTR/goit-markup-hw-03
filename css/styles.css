@@ -57,7 +57,6 @@ padding-left: 0;}
     display: flex;
     flex-direction: row;
     align-items: center;
-    
 }
  
 .logo-studio  {
@@ -80,6 +79,7 @@ color: #4D5AE5;
 
 .nav{
     margin-left: 76px;
+     
     
 }
 
@@ -89,47 +89,44 @@ color: #4D5AE5;
 }
 
 .nav-item {
-    display:inline;
+    display:inline-block;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--headers-text-color);
-margin-right: 40px;
+justify-content: center;
 
 }
 
 .nav-link {
     padding: 15px;
 }
-.nav-item:hover, .nav-item:focus {
-color: #4D5AE5;
 
+.nav-item:hover, .nav-item:focus , .nav-item:active {
+color: #4D5AE5;
 }
 
-.nav-item:hover::after {
+ 
+.nav-item:hover::after, .nav-item:focus::after, .nav-item:active::after  {
    
     content: "";
-    display:inline-flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap-reverse;
-align-items: baseline;
-align-content: start;
-
-    width: 66px;
+    display: block;
+ 
+   
 height: 4px;
 left: 0px;
 top: 48px;
 
- 
 background: #404BBF;
 border-radius: 2px;
+ 
 }
+ 
 
-
-.contact {
-    margin-left: auto;
-   
+ .contact {
+ 
+   margin-left: auto;
 } 
-  
+ 
 .contact-item {
 display:inline ;  
     font-style: normal;
@@ -138,6 +135,10 @@ display:inline ;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--headers-text-color);
+ 
+}
+
+.contact-item:first-child {
     margin-right: 40px;
 }
 
@@ -151,9 +152,8 @@ display:inline ;
 .main-box {
     padding: 188px 0;
     background: var(--accent-background-color);
-background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1-2.jpg);
-background-size: cover;
-max-width: 1440рх;
+background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1-2.jpg); 
+background-size:   1440px;
 } 
 
  
@@ -243,6 +243,8 @@ border-radius: 4px;
     margin-bottom: 8px;
     }
 
+
+
     .antenna::before {
         content: "";
         display: block;
@@ -251,6 +253,7 @@ background-size: 64px;
 background-repeat: no-repeat;
 background-position: center;
     }
+
 
     .timer::before {
         content: "";
@@ -454,26 +457,22 @@ margin-bottom: 72px;
     border: 1px solid #8E8F99;
     border-radius: 4px;
     padding: 16px 32px ;
- 
 }
 
-.cust-list-item:hover {
-      
-    border: 1px solid #404BBF;
-    border-radius: 4px;
- 
-}
-
-.cust-icon {
-   fill: red;
- 
-}
-
-
-.cust-link:hover {
-    stroke: #404BBF;
-    fill: #404BBF;
+.cust-link {
+    fill:#8E8F99  ;   
 } 
+
+.cust-list-item:hover {   
+    border-color: #404BBF; 
+}
+
+.cust-list-item:hover > .cust-link {
+    fill: #404bbf;  
+}
+
+
+
 
 /* -- PORTFOLIO PAGE -- */ /* -- PORTFOLIO PAGE -- */
 /* -- PORTFOLIO PAGE -- */ /* -- PORTFOLIO PAGE -- */
@@ -518,7 +517,7 @@ padding: 12px 24px;
 }
 
 
-.port-button:hover, .port-button:focus {
+.port-button:hover, .port-button:focus , .port-button:active {
     background: #404BBF;
 color: #FFFFFF;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
