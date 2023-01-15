@@ -91,6 +91,7 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--headers-text-color);
 justify-content: center;
+position: relative;
 }
 
 .nav-link {
@@ -100,6 +101,23 @@ justify-content: center;
 .nav-item:hover, .nav-item:focus , .nav-item:active {
 color: #4D5AE5;
 }
+
+.nav-item.current::after  {
+    content: "";
+    display: block;
+
+height: 4px;
+background: #404BBF;
+border-radius: 2px;
+
+position: absolute;
+width: 100%;
+left: 0;
+bottom: -24px;
+}
+
+
+/* NAV  - AFTER conception to be redone through position absolute
 
 
 
@@ -112,7 +130,7 @@ background: #404BBF;
 border-radius: 2px;
 }
 
-
+*/
 
 /* jumping hovers to REDO
 .nav-item:hover::after, .nav-item:focus::after, .nav-item:active::after  {
