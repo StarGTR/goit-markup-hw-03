@@ -74,13 +74,10 @@ padding-bottom: 24px;
 
 .logo-web   {
 color: #4D5AE5;
-
 }
 
 .nav{
     margin-left: 76px;
-     
-    
 }
 
 .nav-list {
@@ -94,7 +91,6 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--headers-text-color);
 justify-content: center;
-
 }
 
 .nav-link {
@@ -105,7 +101,20 @@ justify-content: center;
 color: #4D5AE5;
 }
 
- 
+
+
+.nav-item.current::after  {
+    content: "";
+    display: block;
+
+height: 4px;
+background: #404BBF;
+border-radius: 2px;
+}
+
+
+
+/* jumping hovers to REDO
 .nav-item:hover::after, .nav-item:focus::after, .nav-item:active::after  {
    
     content: "";
@@ -120,6 +129,10 @@ background: #404BBF;
 border-radius: 2px;
  
 }
+ */
+
+ 
+
  
 
  .contact {
@@ -146,6 +159,13 @@ display:inline ;
     color: #4D5AE5;
 }
 
+
+.contact-item:hover >  .contact-icon {
+    fill: #4D5AE5;
+}
+
+ 
+
 /* -- MAIN BOX -- */
 
 
@@ -154,6 +174,8 @@ display:inline ;
     background: var(--accent-background-color);
 background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1-2.jpg); 
 background-size:   1440px;
+background-size: cover;
+background-repeat: no-repeat;
 } 
 
  
@@ -582,7 +604,6 @@ border-top: none;
 /* -- FOOTER  -- */
 
 .footer {
-
 background: var(--accent-background-color);
 
 padding-top: 100px;
